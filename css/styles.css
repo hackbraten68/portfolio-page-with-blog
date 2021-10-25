@@ -26,6 +26,9 @@ body {
     --fs-h2: 2.25rem;
     --fs-h3: 1.25rem;
     --fs-body: 1rem;
+
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
+          0.125em 0.125em 0.25em rgba(0,0,0,.15);
 }
 
 @media (min-width: 800px) {
@@ -54,6 +57,31 @@ section {
 img {
     display: block;
     max-width: 100%;
+}
+
+:focus {
+    outline: 3px solid var(--clr-accent);
+    outline-offset: 3px;
+}
+
+/* BUTTONS */
+
+.skillset__button {
+    display: inline-block;
+    padding: .5em 1.5em;
+    background: var(--clr-accent);
+    color: var(--clr-dark);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: .8rem;
+    text-transform: uppercase;
+    font-weight: var(--fw-bold);
+    letter-spacing: 2px;
+    transition: transform 200ms ease-in-out;
+}
+
+.skillset__button:hover {
+    transform: scale(1.2    );
 }
 
 /* TYPOGRAPHY */
@@ -93,6 +121,7 @@ strong {
 .section__subtitle--intro,
 .section__subtitle--about {
     background-color: var(--clr-accent);
+    padding: 0.25em 1em;
     font-family: var(--ff-secondary);
     margin-bottom: 1em;
 }
@@ -106,6 +135,10 @@ nav { display: none;}
 
 .intro {
     position: relative;
+}
+
+.intro__img {
+    box-shadow: var(--bs);
 }
 
 @media (min-width: 600px) {
@@ -123,6 +156,9 @@ nav { display: none;}
     .intro__img {
         grid-area: img;
         min-width: 250px;
+        position: relative;
+        z-index: 2;
+
     }
 
     .section__subtitle--intro {
@@ -131,6 +167,114 @@ nav { display: none;}
         grid-row: 2;
         text-align: right;
         position: relative;
-        legz
+        left: -1.5em;
+        width: calc(100% + 1.5em);
+    }
+}
+
+/* SKILLSETS */
+
+.my-skillsets {
+    background-color: var(--clr-light);
+    background-image: url("../img/coder_background.jpg");
+    background-size: cover;
+    /* background-blend-mode: multiply; */
+    color: var(--clr-light);
+    text-align: center;
+    padding: 3.5em 2em 5em;
+
+
+}
+
+.section__title--skillsets {
+    position: relative;
+}
+.section__title--skillsets::before,
+.section__title--skillsets::after {
+    content: "";
+    display: block;
+    width: 12em;
+    height: 3px;
+    margin: .5em auto;
+    background-color: var(--clr-light);
+    opacity: 60%;
+}
+
+.skillsets {
+    margin-bottom: 4em;
+}
+
+.skillset {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+@media(min-width: 800px) {
+    .skillsets {
+        display: flex;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .skillset + .skillset {
+        margin-left: 4em;
+    }
+}
+
+.fa-html5,
+.fa-css3-alt,
+.fa-js,
+.fa-react,
+.fa-wordpress,
+.fa-shopping-basket {
+    color: var(--clr-accent);
+}
+
+/* ABOUT ME */
+
+.about-me {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-me__img {
+    box-shadow: var(--bs);
+}
+
+@media(min-width: 600px) {
+    .about-me {
+        display: grid;
+        grid-template-columns: 1fr 200px;
+        grid-template-areas: 
+            "title img"
+            "subtitle img"
+            "text img";
+        column-gap: 2em;
+    }
+
+    .section__title--about {
+        grid-area: title;
+    }
+
+    .section__subtitle--about {
+        grid-area: subtitle;
+        grid-column: -1 / 1;
+        grid-row: 2;
+        position: relative;
+        left: -1em;
+        width: calc(100% + 2em);
+        padding-left: 1em;
+        padding-right: calc(200px + 4em);
+    }
+
+    .about-me__body {
+        grid-area: text;
+    }
+
+    .about-me__img {
+        grid-area: img;
+        position: relative;
+        z-index: 2;
     }
 }
