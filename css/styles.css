@@ -137,8 +137,108 @@ strong {
 
 /* HEADER & NAVBAR */
 
-nav { display: none;}
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    max-width: calc(1000px + 1em);
+    margin: 0 auto;
+}
 
+.logo {
+    max-width: 100px;
+}
+
+.nav {
+    position: fixed;
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+
+    transform: translateX(100%);
+    transition: transform 250ms cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+.nav__list {
+    list-style: none;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: left;
+    margin: 0;
+    
+}
+
+.nav__link {
+    color: inherit;
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-h3);
+    text-decoration: none;
+}
+
+.nav__link:hover,
+.nav__link:active,
+.nav__link:focus {
+    color: var(--clr-accent);
+}
+
+.nav-toggle {
+    padding: 0.5em;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-open .nav {
+    transform: translateX(85%);
+}
+
+.nav-open .nav-toggle {
+    position: absolute;
+    z-index: 2000;
+}
+
+.nav-open .hamburger {
+    transform: rotate(.625turn);
+}
+
+.nav-open .hamburger::after {
+    opacity: 0;
+}
+
+.nav-open .hamburger::before {
+    transform: rotate(90deg) translateX(-6px);
+}
+
+.hamburger {
+    display: block;
+    position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    background-color: var(--clr-accent);
+    width: 2em;
+    height: 3px;
+    border-radius: 1em; 
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.hamburger::before { top: 6px;}
+.hamburger::after { bottom: 6px;}
 
 /* INTRO SECTION */
 
@@ -349,6 +449,7 @@ nav { display: none;}
     .portfolio__subtitle--reversed {
         padding-left: 0;
         padding-right: calc(6em + 300px);
+        text-align: center;
     }
 
     .portfolio__body {
