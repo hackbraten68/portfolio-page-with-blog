@@ -468,3 +468,11 @@ header {
     }
 
 }
+
+/* FOOTER */
+
+.footer {
+    background: #111111;
+    color: var(--clr-accent);
+    
+}
