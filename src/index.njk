@@ -1,0 +1,122 @@
+---
+title: Hi, I am Sam | a Frontend Dev
+layout: "base.njk"
+---
+        
+        
+        <!-- INTRO -->
+
+        <section class="intro" id="home">
+            <h1 class="section__title section__title--intro">
+                Hi, I am <strong>Sam Dillenburg</strong>
+            </h1>
+            <p class="section__subtitle section__subtitle--intro">
+                front-end web dev
+            </p>
+            <img class="intro__img" src="./img/Samboi2.jpg" alt="picture of Samuel">
+        </section>
+
+        <!-- SKILLSETS -->
+        
+        <section class="my-skillsets" id="skillsets">
+            <h2 class="section__title section__title--skillsets">
+                my skillsets to make the world a better place
+            </h2>
+            <div class="skillsets">
+                <div class="skillset">
+                    <h3 class="skillset__title"><i class="fab fa-html5 fa-5x"></i></h3>
+                    <p class="skillset__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, reprehenderit.</p>
+                </div>
+
+                <div class="skillset">
+                    <h3 class="skillset__title"><i class="fab fa-css3-alt fa-5x"></i></h3>
+                    <p class="skillset__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, reprehenderit.</p>
+                </div>
+
+                <div class="skillset">
+                    <h3 class="skillset__title"><i class="fab fa-js fa-5x"></i></h3>
+                    <p class="skillset__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, reprehenderit.</p>
+                </div>
+            </div>
+            <a href="#" class="skillset__button">wanna see more?</a>
+        </section>
+
+        <!-- ABOUT ME -->
+
+        <section class="about-me" id="about-me">
+            <h2 class="section_title section__title--about">Who I Am</h2>
+            <p class="section__subtitle section__subtitle--about">Web Developer based in Heidelberg, Germany </p>
+
+            <div class="about-me__body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ducimus exercitationem cumque officiis quos facilis porro voluptatem voluptate sequi enim?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ratione sunt quos a perspiciatis minus?</p>
+            </div>
+            <img src="./img/samboi3.jpg" alt="" class="about-me__img">
+        </section>
+
+        <!-- PORTFOLIO -->
+
+        <section class="projects" id="projects">
+            <h2 class="section__title">my latest projects</h2>
+            <p class="section__subtitle">some projects i did the past few months</p>
+
+            <div class="portfolio__card">
+                <h3 class="portfolio__title">Senior Model Sedcard Webpage</h3>
+                <p class="portfolio__subtitle">clean design, mosaic galleries and easy to update for client.</p>
+                <div class="portfolio__body">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet perferendis vero esse praesentium culpa voluptatibus dicta asperiores reiciendis ipsum cumque, adipisci deleniti, facere maiores tempora?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis soluta temporibus, non itaque veritatis officiis?</p>
+                </div>
+                <img src="./img/beatrice-bratulic.jpg" alt="screenshot of a webpage" class="portfolio__img">
+            </div>
+
+            <div class="portfolio__card portfolio__card--reversed">
+                <h3 class="portfolio__title">Daniel Baptista Photographix</h3>
+                <p class="portfolio__subtitle portfolio__subtitle--reversed">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <div class="portfolio__body">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet perferendis vero esse praesentium culpa voluptatibus dicta asperiores reiciendis ipsum cumque, adipisci deleniti, facere maiores tempora?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis soluta temporibus, non itaque veritatis officiis?</p>
+                </div>
+                <img src="./img/daniel-photographix.jpg" alt="screenshot of a webpage" class="portfolio__img">
+            </div>
+
+            <div class="portfolio__card">
+                <h3 class="portfolio__title">PROJECT XYZ</h3>
+                <p class="portfolio__subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <div class="portfolio__body">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet perferendis vero esse praesentium culpa voluptatibus dicta asperiores reiciendis ipsum cumque, adipisci deleniti, facere maiores tempora?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis soluta temporibus, non itaque veritatis officiis?</p>
+                </div>
+                <img src="./img/momentum-app.jpg" alt="screenshot of a webpage" class="portfolio__img">
+            </div>
+
+            <div class="portfolio__card portfolio__card--reversed">
+                <h3 class="portfolio__title">Quixotte-Music Record Shop</h3>
+                <p class="portfolio__subtitle portfolio__subtitle--reversed">e-Commerce webshop based on wordpress.</p>
+                <div class="portfolio__body">
+                    <p>a musician in need reached out to me and asked if i could help him setting up a webshop for him and fellow comrades, after his site got hacked and was offline for several months.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis soluta temporibus, non itaque veritatis officiis?</p>
+                </div>
+                <img src="./img/quixotte-music.jpg" alt="screenshot of a webpage" class="portfolio__img">
+            </div>
+
+            
+        </section>
+
+        <section class="featured-articles">
+            <div class="container">
+                <h2 class="featured-articles__title">Some of my latest Articles</h2>
+                <p class="featured-article__subtitle">just some random text for now..</p>
+                    <ul role="list" class="articles__list flow">
+                        {%- for post in collections.featured | reverse -%}
+                        {% include "article-snippet.njk" %}
+                        {%- endfor -%}
+                    </ul>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+
+        
+
+        <script src="./js/index.js" async defer></script>
