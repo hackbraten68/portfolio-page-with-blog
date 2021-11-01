@@ -540,7 +540,7 @@ header {
 }
 
 .articles__list li {
-    border: 2px var(--clr-accent) dashed;
+    border: 1px var(--clr-accent) solid;
     padding: 1.5em;
     margin-bottom: 2em;
     background: inherit;
@@ -582,7 +582,13 @@ header {
     align-self: flex-start; 
     position: relative;
     z-index: 2;
+    transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
   }
+
+  .snippet__image:hover {
+    transform: scale(1.1);
+  }
+
   .snippet__title {
     grid-area: title;
     margin-top: 1em;
