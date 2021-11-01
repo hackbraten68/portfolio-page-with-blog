@@ -545,7 +545,7 @@ header {
 }
 
 .articles__list li {
-    border: 1px var(--clr-accent) solid;
+    /* border: 1px var(--clr-accent) solid; */
     padding: 1.5em;
     margin-bottom: 2em;
     background: inherit;
@@ -563,19 +563,20 @@ header {
 .featured-articles__subtitle {
     color: var(--clr-light);
     font-family: var(--ff-secondary);
+    text-align: center;
 }
 
 .snippet {
     display: grid; 
-  grid-auto-columns: 1fr; 
-  grid-template-columns: 1fr 1fr; 
-  grid-template-rows: 0.3fr 0.3fr 2.4fr 1fr; 
-  gap: 0px 0px; 
-  grid-template-areas: 
-    "title image"
-    "meta image"
-    "body image"
-    "button image";     
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 0.3fr 0.3fr 2.4fr 1fr; 
+    /* gap: 0px 0px;  */
+    grid-template-areas: 
+        "title image"
+        "meta image"
+        "body image"
+        "button image";     
   }
   
   .snippet__image {
@@ -585,7 +586,7 @@ header {
     object-fit: cover;
     box-shadow: var(--bs);
     justify-self: center; 
-    align-self: flex-start; 
+    align-self: center; 
     position: relative;
     z-index: 2;
     transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
@@ -635,8 +636,8 @@ header {
     
     background: var(--clr-accent);
     color: var(--clr-dark);
-    width: 200px;
-    padding: 1.5em;
+    /* width:150px; */
+    padding: 15px 25px;
     margin: 0 auto;
 
     
@@ -658,4 +659,10 @@ header {
 .articles__list li {
     list-style: none;
     background: var(--clr-dark);
+}
+
+.currentYear {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: var(--ff-secondary);
 }
