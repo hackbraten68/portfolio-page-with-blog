@@ -524,7 +524,127 @@ header {
 
 /* Recent Articles */
 
-.snippet article {
-    display: flex;
-    flex-direction: row;
+.featured-articles {
+    background: var(--clr-darker);
+}
+
+.container {
+    /* border: 1px red solid; */
+    /* background: var(--clr-darker); */
+}
+
+.articles__list {
+    /* border: 1px black solid; */
+    margin: 0;
+    padding: 0;
+}
+
+.articles__list li {
+    border: 2px var(--clr-accent) dashed;
+    padding: 1.5em;
+    margin-bottom: 2em;
+    background: inherit;
+}
+
+.articles__list li:last-child {
+    margin-bottom: 0;
+}
+
+.featured-articles__title {
+    color: var(--clr-light);
+    text-align: center;
+}
+
+.featured-articles__subtitle {
+    color: var(--clr-light);
+}
+
+.snippet {
+    display: grid; 
+  grid-auto-columns: 1fr; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 0.3fr 0.3fr 2.4fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "title image"
+    "meta image"
+    "body image"
+    "button image";     
+  }
+  
+  .snippet__image {
+    grid-area: image;
+    width: 75%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    box-shadow: var(--bs);
+    justify-self: center; 
+    align-self: flex-start; 
+    position: relative;
+    z-index: 2;
+  }
+  .snippet__title {
+    grid-area: title;
+    margin-top: 1em;
+    color: var(--clr-light);
+    
+  }
+
+  .snippet__title a {
+      color: inherit;
+      text-decoration: none;
+  }
+
+  .snippet__meta {
+    grid-area: meta;
+    background: var(--clr-accent);
+    color: var(--clr-blue-accent);
+    grid-column: -1 / 1;
+    width: calc(100% - 1.5em);
+    position: relative;
+    left: -1em;
+    right: 0;
+    padding-left: 1.5em;
+    font-weight: var(--fw-reg);
+  }
+  
+  .snippet__meta span {
+    color: var(--clr-dark);
+    font-weight: var(--fw-bold);
+  }
+
+  .snippet__description {
+      grid-area: body;
+
+      color: var(--clr-light);
+  }
+  
+  .snippet .btn {
+    grid-area: button;
+    
+    background: var(--clr-accent);
+    color: var(--clr-dark);
+    width: 200px;
+    padding: 1.5em;
+    margin: 0 auto;
+
+    
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: var(--ff-secondary);
+    font-weight: var(--fw-bold);
+    cursor: pointer;
+    
+    letter-spacing: 2px;
+    transition: transform 200ms ease-in-out;
+  }
+
+  .snippet .btn:hover {
+    transform: scale(1.2);
+  }
+
+.articles__list li {
+    list-style: none;
+    background: var(--clr-dark);
 }

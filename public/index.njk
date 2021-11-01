@@ -106,7 +106,7 @@ layout: "base.njk"
         <section class="featured-articles">
             <div class="container">
                 <h2 class="featured-articles__title">Some of my latest Articles</h2>
-                <p class="featured-article__subtitle">just some random text for now..</p>
+                <p class="featured-articles__subtitle">just some random text for now..</p>
                     <ul role="list" class="articles__list flow">
                         {%- for post in collections.featured | reverse -%}
                         {% include "article-snippet.njk" %}
