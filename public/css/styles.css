@@ -526,11 +526,16 @@ header {
 
 .featured-articles {
     background: var(--clr-darker);
+    max-width: 100%;
+    margin: 0 auto;
+    
 }
 
 .container {
     /* border: 1px red solid; */
     /* background: var(--clr-darker); */
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .articles__list {
@@ -557,6 +562,7 @@ header {
 
 .featured-articles__subtitle {
     color: var(--clr-light);
+    font-family: var(--ff-secondary);
 }
 
 .snippet {
@@ -611,12 +617,11 @@ header {
     left: -1em;
     right: 0;
     padding-left: 1.5em;
-    font-weight: var(--fw-reg);
+    font-family: var(--ff-secondary);
   }
   
   .snippet__meta span {
     color: var(--clr-dark);
-    font-weight: var(--fw-bold);
   }
 
   .snippet__description {
