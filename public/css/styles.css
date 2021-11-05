@@ -545,10 +545,11 @@ header {
 }
 
 .articles__list li {
-    /* border: 1px var(--clr-accent) solid; */
+    border: 1px var(--clr-accent) solid;
     padding: 1.5em;
     margin-bottom: 2em;
     background: inherit;
+    
 }
 
 .articles__list li:last-child {
