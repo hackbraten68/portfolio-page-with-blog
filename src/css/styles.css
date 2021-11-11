@@ -464,6 +464,7 @@ header {
 
     .portfolio__img {
         grid-area: img;
+        width: 350px;
         position: relative;
         z-index: 2;
     }
