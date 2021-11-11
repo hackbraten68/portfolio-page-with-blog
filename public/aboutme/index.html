@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Blog</title>
+    <title>About Sam</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
@@ -14,22 +14,41 @@
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-    
-    
-<main>      
-    <div class="section container">
-        <h1 class="section-title">Recent articles</h1>
-        <ul role="list" class="articles__list flow"><li>
-    <article class="snippet">
-        <img class="snippet__image" src="/img/Samboi2.jpg" alt="a picture of sam - ">
-        <h3 class="snippet__title"><a href="/blog/2021-11-11-how-i-turned-a-static-html-portfolio-website-into-a-serverless-blog/">How i turned a static html portfolio website into a serverless blog</a></h3>
-        <p class="snippet__meta">by <span>Sam</span> on <span>Do., 11. Nov. 2021</span></p>
-        <p class="snippet__description">in this article i wrote about how i turned my static, hardcoded html website into a serverless cms blog system using 11ty and netlify cms service</p>
-        <a href="/blog/2021-11-11-how-i-turned-a-static-html-portfolio-website-into-a-serverless-blog/" class="btn btn-primary">Read more !</a>
-    </article>
-</li></ul>
+    <header>
+    <div class="logo">
+        <img src="./img/devsam.png" alt="">
     </div>
-</main>
+    <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+    </button>
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+            <li class="nav__item"><a href="#blog" class="nav__link">Blog</a></li>
+            <li class="nav__item"><a href="#about-me" class="nav__link">About Me</a></li>
+            <li class="nav__item"><a href="#projects" class="nav__link">Portfolio</a></li>
+        </ul>
+    </nav>
+</header>
+    
+
+
+container   
+    h1
+    text img
+
+
+container
+    col-1
+    col-2
+    col-3
+
+container
+    h1 + text
+    col-1
+    col-2
+    col-3
+
     <footer class="footer">
             <a href="mailto:sam.studi@gmail.com" class="footer__link">sam.studi@gmail.com</a>
             <ul class="social-list">
@@ -69,6 +88,6 @@
     });
   }
 </script>
-
+<script src="/js/index.js" async defer></script>
 </body>
 </html>
