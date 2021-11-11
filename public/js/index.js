@@ -2,6 +2,7 @@ const navToggle = document.querySelector(".nav-toggle")
 
 navToggle.addEventListener("click", () => {
     document.body.classList.toggle("nav-open")
+    console.log("oh, you´re checking the console")
 })
 
 const navLinks = document.querySelectorAll(".nav__link")
