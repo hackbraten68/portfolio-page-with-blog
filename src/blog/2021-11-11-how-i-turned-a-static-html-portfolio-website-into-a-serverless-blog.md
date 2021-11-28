@@ -11,4 +11,6 @@ tags:
   - post
   - featured
 ---
-after planting a seed, all it needs is some water, sunlight and some time - i´ll take this metapher to show you how a take my approach for the growth of my portfolio website.
+> after planting a seed, all it needs is some water, sunlight and some time...
+
+i´ll take this metapher to show you how a take my approach for the growth of my portfolio website.
