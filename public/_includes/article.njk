@@ -5,15 +5,13 @@ layout: "base_blog.njk"
 <article class="main-article">
 <div class="container container--narrow flow">
   
-    <h1 class="article-title">{{ title }}</h1>
-    <figure class="main-article__figure">
-      <img src="{{ image }}" alt="{{ imageAlt }}">
-      <figcaption>
-        {{ imageAlt }}
-      </figcaption>
-    </figure>
+    <h2 class="article-title">{{ title }}</h2>
+    <img class="main-article__image" src="{{ image }}" alt="{{ imageAlt }}">
+    <p class="article-author__meta">by <span>{{ post.data.author }}</span> on <span>{{ post.data.date | postDate }}</span></p>
+    <div class="content">
+      {{ content | safe }}
+    </div>
     
-    {{ content | safe }}
 
 </div>
 </article>
