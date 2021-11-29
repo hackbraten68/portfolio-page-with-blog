@@ -663,6 +663,24 @@ header {
 
 /* BLOG ARTICLE */
 
+.header__backlink {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.backlink {
+    display: flex;
+    align-content: center;
+    justify-items: center;
+    margin: 0 auto;
+}
+
+.backlink p {
+    margin: 0 auto;
+    justify-content: start;
+    font-size: var(--fs-body);
+}
+
 .container--narrow {
     display: grid;
     grid-template-columns: 800px;
@@ -685,7 +703,7 @@ header {
   
 .article-title { 
     grid-area: title;
-    padding: 1em .5em .25em;
+    padding: .5em .5em .25em;
     
 }
 
@@ -701,7 +719,7 @@ header {
   
 .main-article__image {
     grid-area: image;
-    max-width: 50%;
+    max-width: 80%;
     aspect-ratio: 4 / 3;
     object-fit: cover;
     margin: 1em auto 0;
