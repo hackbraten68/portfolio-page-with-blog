@@ -736,8 +736,253 @@ header {
 .content p {
     margin: 0 auto;
 }
-  
 
+/* RESUME */
+
+.resume {
+    width: calc(100px +2em);
+    background-color: var(--clr-darker);
+    padding-bottom: 3em;
+    padding-top: 0;
+}
+
+.container__resume {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: min-content 1fr 1fr 1fr 1fr;
+    gap: 10px 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "title title"
+      "html motivation"
+      "css skills"
+      "javascript skills"
+      "wordpress skills";
+
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: var(--clr-darker);
+  }
+  
+.title {
+    grid-area: title;
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    padding: .25em .5em;
+}
+  
+.skills {
+    grid-area: skills;
+}
+
+.motivation {
+    grid-area: motivation;
+}
+
+.skills,
+.motivation {
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    text-align: left;
+    padding-top: .5em;
+    padding-left: .5em;
+}
+
+.container__html {
+    grid-area: html;
+}
+
+.container__css {
+    grid-area: css;
+}
+
+.container__javascript {
+    grid-area: javascript;
+}
+
+.container__wordpress {
+    grid-area: wordpress;
+}
+
+.container__html,
+.container__css,
+.container__javascript,
+.container__wordpress {
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    grid-template-rows: 0.3fr 1.7fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "i title"
+        "i body";
+
+    color: var(--clr-light);
+    background-color: var(--clr-dark); 
+}
+
+.container__html a {
+    text-decoration: none;
+    color: var(--clr-accent); 
+}
+
+.container__css a {
+    text-decoration: none;
+    color: var(--clr-accent); 
+}
+
+.container__javascript a {
+    text-decoration: none;
+    color: var(--clr-accent);
+}
+
+.container__wordpress a {
+    text-decoration: none;
+    color: var(--clr-accent);
+}
+
+.container__motivation a {
+    text-decoration: none;
+    color: var(--clr-accent);
+}
+
+.html__icon,
+.css__icon,
+.javascript__icon,
+.wordpress__icon {
+    grid-area: i;
+    justify-self: center; 
+    align-self: center; 
+}
+
+.html__title, 
+.css__title,
+.javascript__title,
+.wordpress__title {
+    grid-area: title;
+    padding-top: 0.5em;
+}
+
+.html__body,
+.css__body,
+.javascript__body,
+.wordpress__body {
+    grid-area: body;
+    margin: .5em 0 1em;
+    padding-right: 0.5em;
+}
+
+.html__body p { margin: 0; }
+.css__body p { margin: 0; }
+.javascript__body p { margin: 0;}
+.wordpress__body p { margin: 0;}
+
+/* EDUCATION CARD */
+
+.motivation__title {
+    margin-left: .25em;
+}
+
+.container__motivation {
+    display: flex;
+}
+
+.scrimba__icon {
+    align-self: center;
+    margin-left: .25em;
+}
+
+.scrimba__body {
+    padding-left: .5em;
+    padding-right: .5em;
+    margin: .5em 0 .5em;
+}
+
+/* SKILLBAR */
+
+.skills__title {
+    margin-left: .25em;
+}
+
+.container__skills {
+    background-color: var(--clr-darker);
+    width: calc(100% - .5em);
+}
+
+.skillbar__title {
+    margin: .75em 0 .75em .5em;
+}
+
+.skillbar__progbar {
+    content: "";
+    display: block;
+    width: calc(100% - 1em);
+    height: .3em;
+    background-color: var(--clr-dark);
+    margin: 0 .5em;
+}
+
+.skillbar__progbar--html {
+    content: "";
+    display: block;
+    width: 87%;
+    height: .3em;
+    background-color: var(--clr-accent);
+}
+
+.skillbar__progbar--css {
+    content: "";
+    display: block;
+    width: 90%;
+    height: .3em;
+    background-color: var(--clr-accent); 
+}
+
+.skillbar__progbar--javascript {
+    content: "";
+    display: block;
+    width: 75%;
+    height: .3em;
+    background-color: var(--clr-accent); 
+}
+
+.skillbar__progbar--react {
+    content: "";
+    display: block;
+    width: 60%;
+    height: .3em;
+    background-color: var(--clr-accent); 
+}
+
+.skillbar__progbar--wordpress {
+    content: "";
+    display: block;
+    width: 90%;
+    height: .3em;
+    background-color: var(--clr-accent); 
+}
+
+.skillbar__progbar--liquid {
+    content: "";
+    display: block;
+    width: 65%;
+    height: .3em;
+    background-color: var(--clr-accent);
+}
+
+.skillbar__progbar--git {
+    content: "";
+    display: block;
+    width: 80%;
+    height: .3em;
+    background-color: var(--clr-accent);
+}
+
+.skillbar:last-child {
+    padding-bottom: 1em;
+    margin-bottom: .5em;
+}
+  
 /* META INFO */
 
 .currentYear {
